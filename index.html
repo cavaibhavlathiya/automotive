@@ -1,0 +1,733 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Vaibhav Lathiya, FCA, CPA | Automotive Finance Portfolio</title>
+<meta name="description" content="Automotive finance portfolio of Vaibhav Lathiya, FCA, CPA – Chartered Accountant with 10+ years in FP&amp;A, reporting, controls, vehicle costing and sales incentives across automotive groups in the UAE and Oman.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --navy: #1b2f4e;
+    --navy-dark: #12213a;
+    --navy-soft: #2c4672;
+    --grey-900: #2b2f36;
+    --grey-700: #4f5661;
+    --grey-500: #7b828d;
+    --grey-200: #e3e6ea;
+    --grey-100: #f3f5f7;
+    --white: #ffffff;
+    --accent: #b08d57;
+    --radius: 6px;
+    --max: 1080px;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: "Source Sans 3", "Segoe UI", Arial, sans-serif;
+    color: var(--grey-900);
+    background: var(--white);
+    line-height: 1.6;
+    font-size: 17px;
+  }
+  a { color: var(--navy-soft); }
+  .wrap { max-width: var(--max); margin: 0 auto; padding: 0 20px; }
+
+  /* Navigation */
+  nav {
+    position: sticky; top: 0; z-index: 10;
+    background: var(--navy-dark);
+    border-bottom: 3px solid var(--accent);
+  }
+  nav .wrap { display: flex; align-items: center; justify-content: space-between; height: 58px; gap: 16px; }
+  nav .brand { color: var(--white); font-weight: 700; text-decoration: none; letter-spacing: .3px; white-space: nowrap; }
+  nav ul { list-style: none; display: flex; gap: 22px; overflow-x: auto; }
+  nav ul a { color: #c9d3e3; text-decoration: none; font-size: 15px; white-space: nowrap; }
+  nav ul a:hover { color: var(--white); }
+
+  /* Hero */
+  header.hero { background: var(--navy); color: var(--white); padding: 80px 0 70px; }
+  .hero .monogram {
+    width: 76px; height: 76px; border-radius: 50%;
+    border: 2px solid var(--accent); display: grid; place-items: center;
+    font-size: 28px; font-weight: 700; color: var(--accent); margin-bottom: 22px;
+  }
+  .hero h1 { font-size: 44px; line-height: 1.15; font-weight: 700; }
+  .hero .title { font-size: 20px; color: #c9d3e3; margin-top: 10px; font-weight: 600; }
+  .hero .value { font-size: 19px; max-width: 760px; margin-top: 22px; color: #e6ebf3; }
+  .hero .meta { margin-top: 18px; color: #aebbd0; font-size: 15px; }
+  .btns { margin-top: 30px; display: flex; flex-wrap: wrap; gap: 12px; }
+  .btn {
+    display: inline-block; padding: 11px 22px; border-radius: var(--radius);
+    font-weight: 600; text-decoration: none; font-size: 16px;
+  }
+  .btn-primary { background: var(--accent); color: var(--navy-dark); }
+  .btn-primary:hover { background: #c39f68; }
+  .btn-outline { border: 1px solid #aebbd0; color: var(--white); }
+  .btn-outline:hover { background: rgba(255,255,255,.08); }
+
+  /* Sections */
+  section { padding: 70px 0; }
+  section.alt { background: var(--grey-100); }
+  .section-label { color: var(--accent); font-weight: 700; font-size: 13px; letter-spacing: 1.6px; text-transform: uppercase; }
+  h2 { font-size: 30px; color: var(--navy); margin: 6px 0 26px; line-height: 1.25; }
+  h3 { font-size: 20px; color: var(--navy); line-height: 1.3; }
+  p + p { margin-top: 14px; }
+  .lead { max-width: 820px; color: var(--grey-700); }
+
+  /* Highlights */
+  .metrics { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; }
+  .metric {
+    background: var(--white); border: 1px solid var(--grey-200); border-top: 3px solid var(--navy);
+    border-radius: var(--radius); padding: 22px 20px;
+  }
+  .metric .num { font-size: 32px; font-weight: 700; color: var(--navy); line-height: 1.1; }
+  .metric .lbl { margin-top: 8px; color: var(--grey-700); font-size: 15px; }
+
+  /* Career timeline */
+  .timeline { border-left: 2px solid var(--grey-200); margin-left: 6px; }
+  .role { position: relative; padding: 0 0 26px 26px; }
+  .role::before {
+    content: ""; position: absolute; left: -7px; top: 7px; width: 12px; height: 12px;
+    border-radius: 50%; background: var(--navy); border: 2px solid var(--white);
+  }
+  .role:last-child { padding-bottom: 0; }
+  .role .head { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 4px 16px; }
+  .role .org { color: var(--grey-700); font-size: 16px; }
+  .role .dates { color: var(--grey-500); font-size: 15px; font-weight: 600; }
+  .role p { color: var(--grey-700); font-size: 16px; margin-top: 6px; }
+
+  /* Competencies */
+  .chips { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 12px; }
+  .chip {
+    background: var(--white); border: 1px solid var(--grey-200); border-left: 3px solid var(--accent);
+    padding: 13px 16px; border-radius: var(--radius); font-weight: 600; color: var(--grey-900); font-size: 16px;
+  }
+
+  /* Case studies */
+  .cases { display: grid; gap: 22px; }
+  .case { background: var(--white); border: 1px solid var(--grey-200); border-radius: var(--radius); padding: 28px; }
+  .case .tag { display: inline-block; font-size: 13px; font-weight: 600; color: var(--navy-soft); background: #e8edf5; padding: 3px 10px; border-radius: 20px; margin-bottom: 10px; }
+  .case h3 { margin-bottom: 18px; }
+  .case-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 18px 28px; }
+  .case-grid h4 { font-size: 13px; letter-spacing: 1.2px; text-transform: uppercase; color: var(--accent); margin-bottom: 4px; }
+  .case-grid p, .case-grid li { font-size: 16px; color: var(--grey-700); }
+  .case-grid ul { padding-left: 18px; }
+  .case .file { margin-top: 20px; padding-top: 16px; border-top: 1px solid var(--grey-200); font-size: 15px; }
+  .case .file a { font-weight: 600; text-decoration: none; }
+  .case .file a:hover { text-decoration: underline; }
+
+  /* Skills */
+  .skills { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 18px; }
+  .skill { background: var(--white); border: 1px solid var(--grey-200); border-radius: var(--radius); padding: 22px; }
+  .skill h3 { font-size: 17px; margin-bottom: 10px; }
+  .skill ul { list-style: none; }
+  .skill li { font-size: 16px; color: var(--grey-700); padding: 4px 0; border-bottom: 1px dashed var(--grey-200); }
+  .skill li:last-child { border-bottom: 0; }
+
+  /* Certifications */
+  .certs { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 18px; }
+  .cert { border: 1px solid var(--grey-200); border-radius: var(--radius); padding: 20px 22px; background: var(--white); }
+  .cert .yr { color: var(--grey-500); font-size: 15px; font-weight: 600; }
+  .cert p { color: var(--grey-700); font-size: 16px; margin-top: 2px; }
+  .subhead { font-size: 18px; color: var(--navy); margin: 34px 0 12px; }
+  .plain-list { padding-left: 20px; color: var(--grey-700); }
+  .plain-list li { padding: 3px 0; }
+
+  /* Contact */
+  .contact { background: var(--navy); color: var(--white); }
+  .contact h2 { color: var(--white); }
+  .contact .lead { color: #c9d3e3; }
+  .contact-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 16px; margin-top: 26px; }
+  .contact-item { border: 1px solid #3c5583; border-radius: var(--radius); padding: 18px 20px; }
+  .contact-item .k { font-size: 13px; letter-spacing: 1.2px; text-transform: uppercase; color: var(--accent); font-weight: 700; }
+  .contact-item a, .contact-item span { color: var(--white); text-decoration: none; font-size: 17px; word-break: break-word; }
+  .contact-item a:hover { text-decoration: underline; }
+
+  footer { background: var(--navy-dark); color: #8e9bb2; font-size: 14px; padding: 22px 0; }
+  footer .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 8px 20px; }
+
+
+  /* Dashboards */
+  .note-banner { background:#fff8ec; border:1px solid #ecdcbf; border-left:4px solid var(--accent); padding:12px 16px; border-radius:var(--radius); color:var(--grey-700); font-size:15px; margin-bottom:26px; }
+  .kpis { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:14px; margin-bottom:22px; }
+  .kpi { background:var(--white); border:1px solid var(--grey-200); border-radius:var(--radius); padding:16px 18px; }
+  .kpi .k { font-size:13px; color:var(--grey-500); font-weight:600; text-transform:uppercase; letter-spacing:.8px; }
+  .kpi .v { font-size:26px; font-weight:700; color:var(--navy); line-height:1.2; margin-top:4px; }
+  .kpi .d { font-size:14px; margin-top:4px; color:var(--grey-700); }
+  .up { color:#2e7d5b; font-weight:600; } .down { color:#b0413e; font-weight:600; }
+  .dash-grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:18px; }
+  .panel { background:var(--white); border:1px solid var(--grey-200); border-radius:var(--radius); padding:20px; min-width:0; }
+  .panel.wide { grid-column:1 / -1; }
+  .panel h3 { font-size:17px; margin-bottom:2px; }
+  .panel .sub { font-size:14px; color:var(--grey-500); margin-bottom:12px; }
+  .chart-box { width:100%; }
+  .chart-box svg { display:block; height:auto; }
+  .chart-box svg rect:hover, .chart-box svg circle:hover { opacity:.8; }
+  .scroll-hint { display:none; font-size:13px; color:var(--grey-500); margin-top:4px; }
+  .insight { margin-top:12px; padding-top:10px; border-top:1px dashed var(--grey-200); font-size:15px; color:var(--grey-700); }
+  .insight b { color:var(--navy); }
+  .dash-h { font-size:20px; color:var(--navy); margin:34px 0 14px; }
+  .tbl-wrap { overflow-x:auto; }
+  table.pl { width:100%; border-collapse:collapse; font-size:15px; min-width:560px; }
+  table.pl th { text-align:right; font-size:13px; text-transform:uppercase; letter-spacing:.6px; color:var(--grey-500); padding:8px 10px; border-bottom:2px solid var(--navy); }
+  table.pl th:first-child, table.pl td:first-child { text-align:left; }
+  table.pl td { text-align:right; padding:7px 10px; border-bottom:1px solid var(--grey-200); font-variant-numeric:tabular-nums; }
+  table.pl tr.total td { font-weight:700; color:var(--navy); background:var(--grey-100); }
+  table.pl td.pos { color:#2e7d5b; } table.pl td.neg { color:#b0413e; }
+  .geo { margin-top:26px; }
+  .geo-bar { display:flex; height:38px; border-radius:var(--radius); overflow:hidden; font-size:14px; font-weight:600; color:#fff; }
+  .geo-bar div { display:flex; align-items:center; justify-content:center; white-space:nowrap; padding:0 6px; }
+  .geo-legend { display:flex; justify-content:space-between; font-size:13px; color:var(--grey-500); margin-top:6px; gap:8px; }
+  @media (max-width: 760px) {
+    .dash-grid { grid-template-columns:1fr; }
+    .kpis { grid-template-columns:repeat(2,minmax(0,1fr)); }
+    .metrics { grid-template-columns:repeat(2,minmax(0,1fr)); }
+    .metric .num { font-size:26px; }
+    .chart-box { overflow-x:auto; -webkit-overflow-scrolling:touch; }
+    .chart-box svg { min-width:460px; }
+    .panel.wide .chart-box svg { min-width:680px; }
+    .scroll-hint { display:block; }
+    .kpi .v { font-size:22px; }
+    .geo-bar { font-size:12px; }
+  }
+
+  @media (max-width: 760px) {
+    body { font-size: 16px; }
+    nav ul { gap: 16px; }
+    nav .brand { display: none; }
+    header.hero { padding: 56px 0 50px; }
+    .hero h1 { font-size: 32px; }
+    .hero .title { font-size: 17px; }
+    .hero .value { font-size: 17px; }
+    section { padding: 52px 0; }
+    h2 { font-size: 25px; }
+    .case { padding: 22px 18px; }
+    .case-grid { grid-template-columns: 1fr; }
+  }
+  @media print {
+    nav, .btns { display: none; }
+    header.hero, .contact { background: none; color: var(--grey-900); }
+    .hero .title, .hero .value, .hero .meta, .contact .lead { color: var(--grey-700); }
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="wrap">
+    <a class="brand" href="#top">Vaibhav Lathiya, FCA, CPA</a>
+    <ul>
+      <li><a href="#about">About</a></li>
+      <li><a href="#competencies">Competencies</a></li>
+      <li><a href="#case-studies">Case Studies</a></li>
+      <li><a href="#dashboards">Dashboards</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#qualifications">Qualifications</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- HERO -->
+<header class="hero" id="top">
+  <div class="wrap">
+    <div class="monogram" aria-hidden="true">VL</div>
+    <h1>Vaibhav Lathiya, FCA, CPA</h1>
+    <p class="title">Financial Controller &nbsp;|&nbsp; Automotive Finance &middot; FP&amp;A &middot; Reporting &amp; Controls</p>
+    <p class="value">Chartered Accountant (ICAI) and CPA Australia with 10+ years across the UAE, Oman and India, including automotive groups in Dubai and Muscat. I lead a finance team of 5 and manage planning, budgeting, reporting, close and tax for multiple automotive entities.</p>
+    <p class="meta">Based in Dubai, UAE &nbsp;&middot;&nbsp; Dongfeng, Omoda &amp; Jaecoo (UAE) &nbsp;&middot;&nbsp; Mercedes-Benz (Oman)</p>
+    <div class="btns">
+      <a class="btn btn-primary" href="assets/cv.pdf" download>Download CV</a>
+      <a class="btn btn-outline" href="#case-studies">View Case Studies</a>
+    </div>
+  </div>
+</header>
+
+<!-- HIGHLIGHTS -->
+<section class="alt" aria-label="Career highlights">
+  <div class="wrap">
+    <p class="section-label">At a Glance</p>
+    <h2>Career Highlights</h2>
+    <div class="metrics">
+      <div class="metric"><div class="num">5</div><div class="lbl">Finance team members led and reviewed</div></div>
+      <div class="metric"><div class="num">4 days</div><div class="lbl">Month-end close on Microsoft Dynamics 365</div></div>
+      <div class="metric"><div class="num">4 brands</div><div class="lbl">Dongfeng, Omoda, Jaecoo and Mercedes-Benz</div></div>
+      <div class="metric"><div class="num">10+</div><div class="lbl">Years in finance, accounting, tax and audit</div></div>
+      <div class="metric"><div class="num">FCA + CPA</div><div class="lbl">ICAI and CPA Australia</div></div>
+      <div class="metric"><div class="num">2027</div><div class="lbl">Annual budget prepared for two automotive companies</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="wrap">
+    <p class="section-label">About</p>
+    <h2>Finance that leadership can rely on</h2>
+    <div class="lead">
+      <p>I am a Chartered Accountant (ICAI, 2020) and CPA Australia with more than ten years in finance, accounting, tax and audit across the UAE, Oman and India, including current automotive group experience in Dubai.</p>
+      <p>I lead a finance team of 5 and manage financial planning, budgeting, management reporting, cash flow, month-end close, IFRS financial statements, UAE VAT and Corporate Tax for multiple group entities. My automotive-specific work covers vehicle and inventory costing, new and pre-owned sales incentive calculations, and margin analysis.</p>
+      <p>I partner with management on budgets, cost control and performance against plan. A strong audit and internal controls background shapes how I work: every number in a management report should tie to a reconciled balance, and every balance should have a schedule that stands up to review.</p>
+    </div>
+
+    <div class="geo" aria-label="Career by country">
+      <h3 class="subhead" style="margin-top:0">10+ years across three countries</h3>
+      <div class="geo-bar">
+        <div style="flex:6.1;background:#7b828d">India · 6 yrs</div>
+        <div style="flex:3.0;background:#2c4672">Oman · 3 yrs</div>
+        <div style="flex:1.6;background:#b08d57">UAE</div>
+      </div>
+      <div class="geo-legend"><span>2016 · Audit and CA practice, then industry</span><span>2022 · Muscat (Mercedes-Benz)</span><span>2025 · Dubai (automotive)</span></div>
+    </div>
+
+    <h3 class="subhead">Career Journey</h3>
+    <div class="timeline">
+      <div class="role">
+        <div class="head"><h3>Assistant Manager – Finance</h3><span class="dates">Mar 2025 – Present</span></div>
+        <div class="org">MAHY Khoory Automotive, Dubai, UAE &middot; Brands: Dongfeng, Omoda &amp; Jaecoo</div>
+        <p>Lead a finance team of 5 and review their work; 2027 annual budget for two automotive companies; monthly reports and variance analysis with corrective actions; vehicle and inventory costing; monthly sales incentives for new and pre-owned vehicles; month-end and year-end close and IFRS statements on Dynamics 365; cash flow, reconciliations including multi-currency balances; UAE VAT returns, Corporate Tax provision and internal controls.</p>
+      </div>
+      <div class="role">
+        <div class="head"><h3>Assistant Manager – Finance</h3><span class="dates">Apr 2022 – Mar 2025</span></div>
+        <div class="org">Zawawi Trading Company LLC (Mercedes-Benz), Muscat, Oman &middot; Diversified trading group including automotive</div>
+        <p>End-to-end finance across GL, AR, AP, treasury, banking and statutory compliance; treasury, banking relationships and vendor payments; budgets, forecasts and variance analysis; IFRS financial statements and management accounts; stronger controls and reporting processes; Oman VAT end to end, including liaison with the Oman Tax Authority.</p>
+      </div>
+      <div class="role">
+        <div class="head"><h3>Assistant Manager – Finance</h3><span class="dates">Apr 2021 – Mar 2022</span></div>
+        <div class="org">Kanoria Chemicals &amp; Industries Ltd, Ankleshwar, India &middot; Listed company</div>
+        <p>Cost reviews, profitability and variance analysis; budgeting and forecasting support; monthly, quarterly and annual financial statements and management reports on SAP FICO.</p>
+      </div>
+      <div class="role">
+        <div class="head"><h3>Audit / Accounts Executive</h3><span class="dates">Jun 2019 – Mar 2021</span></div>
+        <div class="org">DP Beladiya &amp; Co., Chartered Accountants, Surat, India</div>
+        <p>Statutory, internal and stock audits for manufacturing, trading and service clients; accounts finalisation; income tax and GST compliance.</p>
+      </div>
+      <div class="role">
+        <div class="head"><h3>Article Assistant</h3><span class="dates">Feb 2016 – May 2019</span></div>
+        <div class="org">N.C. Vaishnav &amp; Co. and Mukund &amp; Rohit, Chartered Accountants, Vadodara, India</div>
+        <p>Statutory, internal and tax audits, financial statement preparation, ledger scrutiny and audit working papers.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CORE COMPETENCIES -->
+<section class="alt" id="competencies">
+  <div class="wrap">
+    <p class="section-label">Core Competencies</p>
+    <h2>What I bring to a finance function</h2>
+    <div class="chips">
+      <div class="chip">Budgeting, Forecasting and Financial Planning</div>
+      <div class="chip">Variance Analysis and Corrective Actions</div>
+      <div class="chip">IFRS Financial Statements and Reporting</div>
+      <div class="chip">Management Reporting and KPI Analysis</div>
+      <div class="chip">Vehicle and Inventory Costing</div>
+      <div class="chip">Sales Incentive Calculations: New and Pre-Owned</div>
+      <div class="chip">Cost Control and Margin Analysis</div>
+      <div class="chip">Cash Flow, Liquidity and Working Capital</div>
+      <div class="chip">Internal Controls and Audit Coordination</div>
+      <div class="chip">UAE VAT, Corporate Tax and Transfer Pricing</div>
+      <div class="chip">Team Leadership and Mentoring</div>
+      <div class="chip">ERP: Dynamics 365, SAP FICO, Autoline</div>
+    </div>
+  </div>
+</section>
+
+<!-- CASE STUDIES -->
+<section id="case-studies">
+  <div class="wrap">
+    <p class="section-label">Case Studies</p>
+    <h2>How I approach the work</h2>
+    <p class="lead" style="margin-bottom:30px;">Each case study describes the kind of work I lead. Employer names and figures are withheld.</p>
+
+    <div class="cases">
+
+      <article class="case">
+        <span class="tag">Automotive &middot; Costing</span>
+        <h3>Vehicle and Inventory Costing</h3>
+        <div class="case-grid">
+          <div>
+            <h4>Problem</h4>
+            <p>In a dealership, the cost recorded against each vehicle drives both the margin reported on every sale and the value of stock on the balance sheet. Errors show up as wrong margins and misstated inventory.</p>
+          </div>
+          <div>
+            <h4>My Approach</h4>
+            <ul>
+              <li>Handle vehicle and inventory costing for the group's automotive companies</li>
+              <li>Inventory balance sheet schedules prepared at each month-end and year-end close</li>
+              <li>Margin analysis on vehicle sales for management reporting</li>
+            </ul>
+          </div>
+          <div>
+            <h4>Tools</h4>
+            <p>Microsoft Dynamics 365, Autoline, Excel</p>
+          </div>
+          <div>
+            <h4>Outcome</h4>
+            <p>Vehicle margins and inventory values that management and auditors can rely on.</p>
+          </div>
+        </div>
+      </article>
+
+      <article class="case">
+        <span class="tag">Automotive &middot; Incentives</span>
+        <h3>Sales Incentive Calculations: New and Pre-Owned Vehicles</h3>
+        <div class="case-grid">
+          <div>
+            <h4>Problem</h4>
+            <p>Sales staff incentives are a significant cost and a key motivator. They have to be calculated accurately every month, in line with the approved scheme, for both new and pre-owned vehicle sales.</p>
+          </div>
+          <div>
+            <h4>My Approach</h4>
+            <ul>
+              <li>Prepare the monthly sales staff incentive calculations for new and pre-owned vehicles</li>
+              <li>Calculate payouts in line with the approved incentive schemes</li>
+              <li>Incentive cost reflected in margin analysis and management reporting</li>
+            </ul>
+          </div>
+          <div>
+            <h4>Tools</h4>
+            <p>Excel, Microsoft Dynamics 365 sales data</p>
+          </div>
+          <div>
+            <h4>Outcome</h4>
+            <p>Accurate, timely monthly incentive payouts for the sales teams.</p>
+          </div>
+        </div>
+      </article>
+
+      <article class="case">
+        <span class="tag">FP&amp;A</span>
+        <h3>2027 Budget, Variance Analysis and Corrective Actions</h3>
+        <div class="case-grid">
+          <div>
+            <h4>Problem</h4>
+            <p>Automotive companies need a budget that management can use to control cost and track performance, and monthly reporting that explains variances and what to do about them.</p>
+          </div>
+          <div>
+            <h4>My Approach</h4>
+            <ul>
+              <li>Prepared the 2027 annual budget for two group automotive companies</li>
+              <li>Monitor performance against budget and support forecasting</li>
+              <li>Monthly reports and variance analysis on revenue, margin and cost drivers, with recommended corrective actions</li>
+              <li>In Oman, supported budgets, forecasts and variance analysis on revenue, profitability, working capital and cash flow</li>
+            </ul>
+          </div>
+          <div>
+            <h4>Tools</h4>
+            <p>Excel financial modelling, Power BI, Microsoft Dynamics 365</p>
+          </div>
+          <div>
+            <h4>Outcome</h4>
+            <p>A budget and monthly reporting cycle that management uses for cost control and performance against plan.</p>
+          </div>
+        </div>
+      </article>
+
+      <article class="case">
+        <span class="tag">Close &middot; IFRS &middot; Team</span>
+        <h3>Month-End Close and IFRS Reporting with a Team of 5</h3>
+        <div class="case-grid">
+          <div>
+            <h4>Problem</h4>
+            <p>Multiple automotive entities need a fast, controlled close that produces IFRS financial statements and audit-ready schedules.</p>
+          </div>
+          <div>
+            <h4>My Approach</h4>
+            <ul>
+              <li>Lead a finance team of 5, setting priorities, deadlines and standards for the close and reporting cycle, and reviewing their work</li>
+              <li>Own month-end and year-end close on Microsoft Dynamics 365</li>
+              <li>Prepare IFRS financial statements (P&amp;L, Balance Sheet, Cash Flow) and audit-ready schedules</li>
+              <li>Inter-company, bank, customer, supplier and balance sheet reconciliations, including multi-currency balances</li>
+            </ul>
+          </div>
+          <div>
+            <h4>Tools</h4>
+            <p>Microsoft Dynamics 365, Excel with Power Query</p>
+          </div>
+          <div>
+            <h4>Outcome</h4>
+            <p>Books closed in <b>4 working days</b>, with IFRS statements and audit-ready schedules for each entity.</p>
+          </div>
+        </div>
+      </article>
+
+      <article class="case">
+        <span class="tag">Tax &middot; Controls</span>
+        <h3>UAE VAT, Corporate Tax and Internal Controls</h3>
+        <div class="case-grid">
+          <div>
+            <h4>Problem</h4>
+            <p>Automotive entities must file accurate VAT returns, carry a supported Corporate Tax provision and keep controls that hold up at audit.</p>
+          </div>
+          <div>
+            <h4>My Approach</h4>
+            <ul>
+              <li>Prepare and file UAE VAT returns for group entities</li>
+              <li>Prepare the UAE Corporate Tax provision</li>
+              <li>Maintain internal financial controls across the close and payment cycle</li>
+              <li>In Oman, managed VAT end to end, including filing and liaison with the Oman Tax Authority</li>
+            </ul>
+          </div>
+          <div>
+            <h4>Tools</h4>
+            <p>Microsoft Dynamics 365, Excel</p>
+          </div>
+          <div>
+            <h4>Outcome</h4>
+            <p>VAT filings and tax provisions in order, with controls that support clean audits.</p>
+          </div>
+        </div>
+      </article>
+
+      <article class="case">
+        <span class="tag">Treasury &middot; Working Capital</span>
+        <h3>Cash Flow, Liquidity and Treasury</h3>
+        <div class="case-grid">
+          <div>
+            <h4>Problem</h4>
+            <p>Dealerships carry large stock and payment commitments, so liquidity planning depends on a reliable view of expected receipts and payments.</p>
+          </div>
+          <div>
+            <h4>My Approach</h4>
+            <ul>
+              <li>Monitor the daily cash position, working capital and liquidity</li>
+              <li>Prepare cash flow forecasts for receipts and payments</li>
+              <li>In Oman, ran treasury, banking relationships and vendor payments, and forecast cash for operating and supplier payment planning</li>
+            </ul>
+          </div>
+          <div>
+            <h4>Tools</h4>
+            <p>Microsoft Dynamics 365 (AR, AP, cash and bank), Excel</p>
+          </div>
+          <div>
+            <h4>Outcome</h4>
+            <p>Forward visibility of liquidity for operating and supplier payment planning.</p>
+          </div>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- DASHBOARDS -->
+<section class="alt" id="dashboards">
+  <div class="wrap">
+    <p class="section-label">Reporting Samples</p>
+    <h2>Dealership reporting I build</h2>
+    <div class="note-banner"><b>Illustrative data.</b> These dashboards show a fictional multi-brand dealer group with AED 628M annual revenue. They demonstrate the format and analysis I deliver to management. No figures come from any employer or brand.</div>
+
+    <div class="kpis">
+      <div class="kpi"><div class="k">Revenue FY25</div><div class="v">AED 628.4M</div><div class="d"><span class="up">+2.2%</span> vs budget</div></div>
+      <div class="kpi"><div class="k">Vehicles sold</div><div class="v">4,630</div><div class="d">3,450 new · 1,180 pre-owned</div></div>
+      <div class="kpi"><div class="k">Gross margin</div><div class="v">12.8%</div><div class="d">GP AED 80.3M · <span class="up">+1.2M</span> vs budget</div></div>
+      <div class="kpi"><div class="k">Service absorption</div><div class="v">91.6%</div><div class="d">Aftersales GP ÷ fixed overheads</div></div>
+      <div class="kpi"><div class="k">Vehicle stock days</div><div class="v">87 days</div><div class="d">AED 118.1M · 828 vehicles in stock</div></div>
+      <div class="kpi"><div class="k">EBITDA</div><div class="v">AED 21.7M</div><div class="d">3.5% of revenue</div></div>
+    </div>
+
+    <h3 class="dash-h">1. Sales and margin</h3>
+    <div class="dash-grid">
+      <div class="panel wide">
+        <h3>Monthly vehicles sold: new and pre-owned vs budget</h3>
+        <div class="sub">Units, FY2025</div>
+        <div class="chart-box"><svg viewBox="0 0 960 320" width="100%" role="img" aria-label="Monthly vehicles sold vs budget" font-family="Source Sans 3, Segoe UI, Arial, sans-serif" preserveAspectRatio="xMidYMid meet"><line x1="52" x2="944" y1="280.0" y2="280.0" stroke="#e3e6ea" stroke-width="1"/><text x="44" y="284.0" text-anchor="end" font-size="12" fill="#4f5661">0</text><line x1="52" x2="944" y1="230.8" y2="230.8" stroke="#e3e6ea" stroke-width="1"/><text x="44" y="234.8" text-anchor="end" font-size="12" fill="#4f5661">100</text><line x1="52" x2="944" y1="181.6" y2="181.6" stroke="#e3e6ea" stroke-width="1"/><text x="44" y="185.6" text-anchor="end" font-size="12" fill="#4f5661">200</text><line x1="52" x2="944" y1="132.4" y2="132.4" stroke="#e3e6ea" stroke-width="1"/><text x="44" y="136.4" text-anchor="end" font-size="12" fill="#4f5661">300</text><line x1="52" x2="944" y1="83.2" y2="83.2" stroke="#e3e6ea" stroke-width="1"/><text x="44" y="87.2" text-anchor="end" font-size="12" fill="#4f5661">400</text><line x1="52" x2="944" y1="34.0" y2="34.0" stroke="#e3e6ea" stroke-width="1"/><text x="44" y="38.0" text-anchor="end" font-size="12" fill="#4f5661">500</text><text x="12" y="157.0" font-size="12" fill="#4f5661" transform="rotate(-90 12 157.0)" text-anchor="middle">Units</text><rect x="68.7" y="129.0" width="40.9" height="151.0" rx="0" fill="#1b2f4e"><title>Jan new: 307 units</title></rect><rect x="68.7" y="79.3" width="40.9" height="49.7" rx="0" fill="#b08d57"><title>Jan pre-owned: 101 units</title></rect><rect x="143.1" y="133.9" width="40.9" height="146.1" rx="0" fill="#1b2f4e"><title>Feb new: 297 units</title></rect><rect x="143.1" y="85.7" width="40.9" height="48.2" rx="0" fill="#b08d57"><title>Feb pre-owned: 98 units</title></rect><rect x="217.4" y="120.6" width="40.9" height="159.4" rx="0" fill="#1b2f4e"><title>Mar new: 324 units</title></rect><rect x="217.4" y="68.9" width="40.9" height="51.7" rx="0" fill="#b08d57"><title>Mar pre-owned: 105 units</title></rect><rect x="291.7" y="140.8" width="40.9" height="139.2" rx="0" fill="#1b2f4e"><title>Apr new: 283 units</title></rect><rect x="291.7" y="92.5" width="40.9" height="48.2" rx="0" fill="#b08d57"><title>Apr pre-owned: 98 units</title></rect><rect x="366.1" y="144.2" width="40.9" height="135.8" rx="0" fill="#1b2f4e"><title>May new: 276 units</title></rect><rect x="366.1" y="97.0" width="40.9" height="47.2" rx="0" fill="#b08d57"><title>May pre-owned: 96 units</title></rect><rect x="440.4" y="160.9" width="40.9" height="119.1" rx="0" fill="#1b2f4e"><title>Jun new: 242 units</title></rect><rect x="440.4" y="116.7" width="40.9" height="44.3" rx="0" fill="#b08d57"><title>Jun pre-owned: 90 units</title></rect><rect x="514.7" y="167.8" width="40.9" height="112.2" rx="0" fill="#1b2f4e"><title>Jul new: 228 units</title></rect><rect x="514.7" y="126.0" width="40.9" height="41.8" rx="0" fill="#b08d57"><title>Jul pre-owned: 85 units</title></rect><rect x="589.1" y="162.9" width="40.9" height="117.1" rx="0" fill="#1b2f4e"><title>Aug new: 238 units</title></rect><rect x="589.1" y="119.6" width="40.9" height="43.3" rx="0" fill="#b08d57"><title>Aug pre-owned: 88 units</title></rect><rect x="663.4" y="144.2" width="40.9" height="135.8" rx="0" fill="#1b2f4e"><title>Sep new: 276 units</title></rect><rect x="663.4" y="96.5" width="40.9" height="47.7" rx="0" fill="#b08d57"><title>Sep pre-owned: 97 units</title></rect><rect x="737.7" y="127.5" width="40.9" height="152.5" rx="0" fill="#1b2f4e"><title>Oct new: 310 units</title></rect><rect x="737.7" y="75.8" width="40.9" height="51.7" rx="0" fill="#b08d57"><title>Oct pre-owned: 105 units</title></rect><rect x="812.1" y="117.1" width="40.9" height="162.9" rx="0" fill="#1b2f4e"><title>Nov new: 331 units</title></rect><rect x="812.1" y="64.5" width="40.9" height="52.6" rx="0" fill="#b08d57"><title>Nov pre-owned: 107 units</title></rect><rect x="886.4" y="113.7" width="40.9" height="166.3" rx="0" fill="#1b2f4e"><title>Dec new: 338 units</title></rect><rect x="886.4" y="59.6" width="40.9" height="54.1" rx="0" fill="#b08d57"><title>Dec pre-owned: 110 units</title></rect><polyline points="89.2,86.6 163.5,89.1 237.8,75.3 312.2,89.1 386.5,91.6 460.8,107.3 535.2,116.2 609.5,114.2 683.8,96.0 758.2,79.8 832.5,70.9 906.8,70.9" fill="none" stroke="#aeb4bd" stroke-width="2.5" stroke-dasharray="6 4" stroke-linejoin="round"/><circle cx="89.2" cy="86.6" r="3.5" fill="#aeb4bd"><title>Jan budget: 393 units</title></circle><circle cx="163.5" cy="89.1" r="3.5" fill="#aeb4bd"><title>Feb budget: 388 units</title></circle><circle cx="237.8" cy="75.3" r="3.5" fill="#aeb4bd"><title>Mar budget: 416 units</title></circle><circle cx="312.2" cy="89.1" r="3.5" fill="#aeb4bd"><title>Apr budget: 388 units</title></circle><circle cx="386.5" cy="91.6" r="3.5" fill="#aeb4bd"><title>May budget: 383 units</title></circle><circle cx="460.8" cy="107.3" r="3.5" fill="#aeb4bd"><title>Jun budget: 351 units</title></circle><circle cx="535.2" cy="116.2" r="3.5" fill="#aeb4bd"><title>Jul budget: 333 units</title></circle><circle cx="609.5" cy="114.2" r="3.5" fill="#aeb4bd"><title>Aug budget: 337 units</title></circle><circle cx="683.8" cy="96.0" r="3.5" fill="#aeb4bd"><title>Sep budget: 374 units</title></circle><circle cx="758.2" cy="79.8" r="3.5" fill="#aeb4bd"><title>Oct budget: 407 units</title></circle><circle cx="832.5" cy="70.9" r="3.5" fill="#aeb4bd"><title>Nov budget: 425 units</title></circle><circle cx="906.8" cy="70.9" r="3.5" fill="#aeb4bd"><title>Dec budget: 425 units</title></circle><text x="89.2" y="298.0" font-size="12" fill="#4f5661" text-anchor="middle">Jan</text><text x="163.5" y="298.0" font-size="12" fill="#4f5661" text-anchor="middle">Feb</text><text x="237.8" y="298.0" font-size="12" fill="#4f5661" text-anchor="middle">Mar</text><text x="312.2" y="298.0" font-size="12" fill="#4f5661" text-anchor="middle">Apr</text><text x="386.5" y="298.0" font-size="12" fill="#4f5661" text-anchor="middle">May</text><text x="460.8" y="298.0" font-size="12" fill="#4f5661" text-anchor="middle">Jun</text><text x="535.2" y="298.0" font-size="12" fill="#4f5661" text-anchor="middle">Jul</text><text x="609.5" y="298.0" font-size="12" fill="#4f5661" text-anchor="middle">Aug</text><text x="683.8" y="298.0" font-size="12" fill="#4f5661" text-anchor="middle">Sep</text><text x="758.2" y="298.0" font-size="12" fill="#4f5661" text-anchor="middle">Oct</text><text x="832.5" y="298.0" font-size="12" fill="#4f5661" text-anchor="middle">Nov</text><text x="906.8" y="298.0" font-size="12" fill="#4f5661" text-anchor="middle">Dec</text><rect x="52" y="10" width="12" height="12" rx="2" fill="#1b2f4e"/><text x="72" y="20" font-size="12.5" fill="#4f5661">New</text><rect x="108.4" y="10" width="12" height="12" rx="2" fill="#b08d57"/><text x="128.4" y="20" font-size="12.5" fill="#4f5661">Pre-owned</text><line x1="205.6" x2="221.6" y1="16" y2="16" stroke="#aeb4bd" stroke-width="2.5" stroke-dasharray="5 3"/><text x="225.6" y="20" font-size="12.5" fill="#4f5661">Budget (total)</text></svg></div>
+        <span class="scroll-hint">Swipe to see the full chart →</span>
+        <div class="insight"><b>Commentary:</b> Total volume of 4,630 units closed level with the 4,620 budget. New vehicles beat plan by 70 units, while pre-owned fell 60 short, mainly in the summer months. Q4 recovered strongly on year-end campaigns.</div>
+      </div>
+      <div class="panel">
+        <h3>Where the gross profit comes from</h3>
+        <div class="sub">Share of revenue vs share of gross profit, by department</div>
+        <div class="chart-box"><svg viewBox="0 0 520 310" width="100%" role="img" aria-label="Revenue share vs gross profit share by department" font-family="Source Sans 3, Segoe UI, Arial, sans-serif"><rect x="150" y="10" width="12" height="12" rx="2" fill="#aeb4bd"/><text x="168" y="20" font-size="12.5" fill="#4f5661">Share of revenue</text><rect x="290" y="10" width="12" height="12" rx="2" fill="#1b2f4e"/><text x="308" y="20" font-size="12.5" fill="#4f5661">Share of gross profit</text><text x="140" y="60.2" font-size="12.5" fill="#4f5661" text-anchor="end">New vehicles</text><rect x="150" y="40.0" width="300.7" height="16.0" rx="2" fill="#aeb4bd"><title>New vehicles: 71% of revenue</title></rect><text x="456.7" y="54.0" font-size="11.5" fill="#4f5661" font-weight="600">71%</text><rect x="150" y="58.1" width="136.4" height="16.0" rx="2" fill="#1b2f4e"><title>New vehicles: 32% of gross profit</title></rect><text x="292.4" y="72.0" font-size="11.5" fill="#4f5661" font-weight="600">32%</text><text x="140" y="113.4" font-size="12.5" fill="#4f5661" text-anchor="end">Pre-owned</text><rect x="150" y="93.2" width="55.4" height="16.0" rx="2" fill="#aeb4bd"><title>Pre-owned: 13% of revenue</title></rect><text x="211.4" y="107.2" font-size="11.5" fill="#4f5661" font-weight="600">13%</text><rect x="150" y="111.3" width="40.9" height="16.0" rx="2" fill="#1b2f4e"><title>Pre-owned: 10% of gross profit</title></rect><text x="196.9" y="125.2" font-size="11.5" fill="#4f5661" font-weight="600">10%</text><text x="140" y="166.6" font-size="12.5" fill="#4f5661" text-anchor="end">Service</text><rect x="150" y="146.4" width="25.7" height="16.0" rx="2" fill="#aeb4bd"><title>Service: 6% of revenue</title></rect><text x="181.7" y="160.4" font-size="11.5" fill="#4f5661" font-weight="600">6%</text><rect x="150" y="164.5" width="136.9" height="16.0" rx="2" fill="#1b2f4e"><title>Service: 33% of gross profit</title></rect><text x="292.9" y="178.4" font-size="11.5" fill="#4f5661" font-weight="600">33%</text><text x="140" y="219.8" font-size="12.5" fill="#4f5661" text-anchor="end">Parts &amp; acc.</text><rect x="150" y="199.6" width="35.3" height="16.0" rx="2" fill="#aeb4bd"><title>Parts &amp; acc.: 8% of revenue</title></rect><text x="191.3" y="213.6" font-size="11.5" fill="#4f5661" font-weight="600">8%</text><rect x="150" y="217.7" width="74.5" height="16.0" rx="2" fill="#1b2f4e"><title>Parts &amp; acc.: 18% of gross profit</title></rect><text x="230.5" y="231.6" font-size="11.5" fill="#4f5661" font-weight="600">18%</text><text x="140" y="273.0" font-size="12.5" fill="#4f5661" text-anchor="end">F&amp;I, warranty</text><rect x="150" y="252.8" width="4.2" height="16.0" rx="2" fill="#aeb4bd"><title>F&amp;I, warranty: 1% of revenue</title></rect><text x="160.2" y="266.8" font-size="11.5" fill="#4f5661" font-weight="600">1%</text><rect x="150" y="270.9" width="32.5" height="16.0" rx="2" fill="#1b2f4e"><title>F&amp;I, warranty: 8% of gross profit</title></rect><text x="188.5" y="284.8" font-size="11.5" fill="#4f5661" font-weight="600">8%</text></svg></div>
+        <span class="scroll-hint">Swipe to see the full chart →</span>
+        <div class="insight"><b>Commentary:</b> New vehicles bring 71% of revenue but only 32% of gross profit. Service and parts bring 14% of revenue and half of gross profit, which is why aftersales performance drives dealership profitability.</div>
+      </div>
+      <div class="panel">
+        <h3>Gross profit per vehicle</h3>
+        <div class="sub">AED thousands per unit, by quarter</div>
+        <div class="chart-box"><svg viewBox="0 0 520 320" width="100%" role="img" aria-label="Gross profit per vehicle by quarter" font-family="Source Sans 3, Segoe UI, Arial, sans-serif" preserveAspectRatio="xMidYMid meet"><line x1="52" x2="504" y1="280.0" y2="280.0" stroke="#e3e6ea" stroke-width="1"/><text x="44" y="284.0" text-anchor="end" font-size="12" fill="#4f5661">0k</text><line x1="52" x2="504" y1="230.8" y2="230.8" stroke="#e3e6ea" stroke-width="1"/><text x="44" y="234.8" text-anchor="end" font-size="12" fill="#4f5661">2k</text><line x1="52" x2="504" y1="181.6" y2="181.6" stroke="#e3e6ea" stroke-width="1"/><text x="44" y="185.6" text-anchor="end" font-size="12" fill="#4f5661">4k</text><line x1="52" x2="504" y1="132.4" y2="132.4" stroke="#e3e6ea" stroke-width="1"/><text x="44" y="136.4" text-anchor="end" font-size="12" fill="#4f5661">6k</text><line x1="52" x2="504" y1="83.2" y2="83.2" stroke="#e3e6ea" stroke-width="1"/><text x="44" y="87.2" text-anchor="end" font-size="12" fill="#4f5661">8k</text><line x1="52" x2="504" y1="34.0" y2="34.0" stroke="#e3e6ea" stroke-width="1"/><text x="44" y="38.0" text-anchor="end" font-size="12" fill="#4f5661">10k</text><text x="12" y="157.0" font-size="12" fill="#4f5661" transform="rotate(-90 12 157.0)" text-anchor="middle">AED per unit</text><polyline points="108.5,110.3 221.5,100.4 334.5,85.7 447.5,85.7" fill="none" stroke="#1b2f4e" stroke-width="2.5" stroke-linejoin="round"/><circle cx="108.5" cy="110.3" r="3.5" fill="#1b2f4e"><title>Q1 new GP/unit: AED 6.9k</title></circle><circle cx="221.5" cy="100.4" r="3.5" fill="#1b2f4e"><title>Q2 new GP/unit: AED 7.3k</title></circle><circle cx="334.5" cy="85.7" r="3.5" fill="#1b2f4e"><title>Q3 new GP/unit: AED 7.9k</title></circle><circle cx="447.5" cy="85.7" r="3.5" fill="#1b2f4e"><title>Q4 new GP/unit: AED 7.9k</title></circle><polyline points="108.5,105.3 221.5,112.7 334.5,127.5 447.5,122.6" fill="none" stroke="#b08d57" stroke-width="2.5" stroke-linejoin="round"/><circle cx="108.5" cy="105.3" r="3.5" fill="#b08d57"><title>Q1 pre-owned GP/unit: AED 7.1k</title></circle><circle cx="221.5" cy="112.7" r="3.5" fill="#b08d57"><title>Q2 pre-owned GP/unit: AED 6.8k</title></circle><circle cx="334.5" cy="127.5" r="3.5" fill="#b08d57"><title>Q3 pre-owned GP/unit: AED 6.2k</title></circle><circle cx="447.5" cy="122.6" r="3.5" fill="#b08d57"><title>Q4 pre-owned GP/unit: AED 6.4k</title></circle><text x="108.5" y="130.3" font-size="12" fill="#1b2f4e" text-anchor="middle" font-weight="600">6.9k</text><text x="108.5" y="95.3" font-size="12" fill="#b08d57" text-anchor="middle" font-weight="600">7.1k</text><text x="221.5" y="90.4" font-size="12" fill="#1b2f4e" text-anchor="middle" font-weight="600">7.3k</text><text x="221.5" y="132.7" font-size="12" fill="#b08d57" text-anchor="middle" font-weight="600">6.8k</text><text x="334.5" y="75.7" font-size="12" fill="#1b2f4e" text-anchor="middle" font-weight="600">7.9k</text><text x="334.5" y="147.5" font-size="12" fill="#b08d57" text-anchor="middle" font-weight="600">6.2k</text><text x="447.5" y="75.7" font-size="12" fill="#1b2f4e" text-anchor="middle" font-weight="600">7.9k</text><text x="447.5" y="142.6" font-size="12" fill="#b08d57" text-anchor="middle" font-weight="600">6.4k</text><text x="108.5" y="298.0" font-size="12" fill="#4f5661" text-anchor="middle">Q1</text><text x="221.5" y="298.0" font-size="12" fill="#4f5661" text-anchor="middle">Q2</text><text x="334.5" y="298.0" font-size="12" fill="#4f5661" text-anchor="middle">Q3</text><text x="447.5" y="298.0" font-size="12" fill="#4f5661" text-anchor="middle">Q4</text><line x1="52" x2="68" y1="16" y2="16" stroke="#1b2f4e" stroke-width="2.5"/><text x="72" y="20" font-size="12.5" fill="#4f5661">New</text><line x1="108.4" x2="124.4" y1="16" y2="16" stroke="#b08d57" stroke-width="2.5"/><text x="128.4" y="20" font-size="12.5" fill="#4f5661">Pre-owned</text></svg></div>
+        <span class="scroll-hint">Swipe to see the full chart →</span>
+        <div class="insight"><b>Commentary:</b> New-vehicle GP per unit rose from AED 6.9k to 7.9k as discounting was tightened. Pre-owned GP per unit fell in Q3 as older stock was cleared at lower margins.</div>
+      </div>
+      <div class="panel wide">
+        <h3>Departmental gross profit: actual vs budget</h3>
+        <div class="sub">AED millions, FY2025 · favourable variances in green, unfavourable in red</div>
+        <div class="tbl-wrap">
+          <table class="pl">
+            <thead><tr><th>Department</th><th>Units</th><th>Revenue</th><th>Gross profit</th><th>GP %</th><th>GP budget</th><th>Var</th></tr></thead>
+            <tbody>
+<tr><td>New vehicles</td><td>3,450</td><td>448.5</td><td>26.0</td><td>5.8%</td><td>24.8</td><td class="pos">+1.2</td></tr>
+<tr><td>Pre-owned vehicles</td><td>1,180</td><td>82.6</td><td>7.8</td><td>9.4%</td><td>8.9</td><td class="neg">-1.1</td></tr>
+<tr><td>Service (labour)</td><td>–</td><td>38.4</td><td>26.1</td><td>68.0%</td><td>25.6</td><td class="pos">+0.5</td></tr>
+<tr><td>Parts &amp; accessories</td><td>–</td><td>52.7</td><td>14.2</td><td>26.9%</td><td>14.0</td><td class="pos">+0.2</td></tr>
+<tr><td>Finance, insurance &amp; warranty</td><td>–</td><td>6.2</td><td>6.2</td><td>100.0%</td><td>5.8</td><td class="pos">+0.4</td></tr>
+<tr class="total"><td>Total</td><td>4,630</td><td>628.4</td><td>80.3</td><td>12.8%</td><td>79.1</td><td class="pos">+1.2</td></tr>
+<tr><td>Operating expenses</td><td></td><td></td><td>(58.6)</td><td></td><td></td><td></td></tr>
+<tr class="total"><td>EBITDA</td><td></td><td></td><td>21.7</td><td>3.5%</td><td></td><td></td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="insight"><b>Commentary:</b> Gross profit beat budget by AED 1.2M. New vehicles (+AED 1.2M), aftersales (+AED 0.7M) and F&amp;I (+AED 0.4M) offset a AED 1.1M shortfall in pre-owned, where lower volumes and stock clearance hit margin. Recommended action: tighter pre-owned buying criteria and earlier pricing of ageing units.</div>
+      </div>
+    </div>
+
+    <h3 class="dash-h">2. Aftersales, stock and incentives</h3>
+    <div class="dash-grid">
+      <div class="panel">
+        <h3>Service absorption rate</h3>
+        <div class="sub">Service and parts gross profit as % of fixed overheads</div>
+        <div class="chart-box"><svg viewBox="0 0 520 320" width="100%" role="img" aria-label="Service absorption rate by quarter" font-family="Source Sans 3, Segoe UI, Arial, sans-serif" preserveAspectRatio="xMidYMid meet"><line x1="52" x2="504" y1="280.0" y2="280.0" stroke="#e3e6ea" stroke-width="1"/><text x="44" y="284.0" text-anchor="end" font-size="12" fill="#4f5661">0%</text><line x1="52" x2="504" y1="230.8" y2="230.8" stroke="#e3e6ea" stroke-width="1"/><text x="44" y="234.8" text-anchor="end" font-size="12" fill="#4f5661">25%</text><line x1="52" x2="504" y1="181.6" y2="181.6" stroke="#e3e6ea" stroke-width="1"/><text x="44" y="185.6" text-anchor="end" font-size="12" fill="#4f5661">50%</text><line x1="52" x2="504" y1="132.4" y2="132.4" stroke="#e3e6ea" stroke-width="1"/><text x="44" y="136.4" text-anchor="end" font-size="12" fill="#4f5661">75%</text><line x1="52" x2="504" y1="83.2" y2="83.2" stroke="#e3e6ea" stroke-width="1"/><text x="44" y="87.2" text-anchor="end" font-size="12" fill="#4f5661">100%</text><line x1="52" x2="504" y1="34.0" y2="34.0" stroke="#e3e6ea" stroke-width="1"/><text x="44" y="38.0" text-anchor="end" font-size="12" fill="#4f5661">125%</text><rect x="80.2" y="114.3" width="56.5" height="165.7" rx="2" fill="#2c4672"><title>Q1 absorption: 84.2%</title></rect><text x="108.5" y="132.3" font-size="12.5" font-weight="700" fill="#ffffff" text-anchor="middle">84.2%</text><rect x="193.2" y="105.8" width="56.5" height="174.2" rx="2" fill="#2c4672"><title>Q2 absorption: 88.5%</title></rect><text x="221.5" y="123.8" font-size="12.5" font-weight="700" fill="#ffffff" text-anchor="middle">88.5%</text><rect x="306.2" y="92.8" width="56.5" height="187.2" rx="2" fill="#2c4672"><title>Q3 absorption: 95.1%</title></rect><text x="334.5" y="110.8" font-size="12.5" font-weight="700" fill="#ffffff" text-anchor="middle">95.1%</text><rect x="419.2" y="86.0" width="56.5" height="194.0" rx="2" fill="#2c4672"><title>Q4 absorption: 98.6%</title></rect><text x="447.5" y="104.0" font-size="12.5" font-weight="700" fill="#ffffff" text-anchor="middle">98.6%</text><line x1="52" x2="504" y1="83.2" y2="83.2" stroke="#b08d57" stroke-width="1.8" stroke-dasharray="6 4"/><text x="108.5" y="298.0" font-size="12" fill="#4f5661" text-anchor="middle">Q1</text><text x="221.5" y="298.0" font-size="12" fill="#4f5661" text-anchor="middle">Q2</text><text x="334.5" y="298.0" font-size="12" fill="#4f5661" text-anchor="middle">Q3</text><text x="447.5" y="298.0" font-size="12" fill="#4f5661" text-anchor="middle">Q4</text><rect x="52" y="10" width="12" height="12" rx="2" fill="#2c4672"/><text x="72" y="20" font-size="12.5" fill="#4f5661">Service absorption</text><line x1="210.39999999999998" x2="226.39999999999998" y1="16" y2="16" stroke="#b08d57" stroke-width="2.5" stroke-dasharray="5 3"/><text x="230.39999999999998" y="20" font-size="12.5" fill="#4f5661">Target 100%</text></svg></div>
+        <span class="scroll-hint">Swipe to see the full chart →</span>
+        <div class="insight"><b>Commentary:</b> Absorption improved from 84% to 99% through the year, helped by higher workshop loading and parts sales. At 100%, aftersales would cover all fixed costs before a single vehicle is sold.</div>
+      </div>
+      <div class="panel">
+        <h3>Vehicle stock ageing</h3>
+        <div class="sub">AED millions and units, 31 Dec 2025 · total AED 118.1M</div>
+        <div class="chart-box"><svg viewBox="0 0 520 300" width="100%" role="img" aria-label="Vehicle stock ageing" font-family="Source Sans 3, Segoe UI, Arial, sans-serif"><text x="82" y="50.0" font-size="12.5" fill="#4f5661" text-anchor="end">0–30 days</text><rect x="92" y="30.4" width="297.3" height="31.2" rx="3" fill="#1b2f4e"><title>0–30 days: AED 58.2M, 412 vehicles</title></rect><text x="397.3" y="50.0" font-size="12.5" fill="#4f5661" font-weight="600">58.2M · 412 units</text><text x="82" y="102.0" font-size="12.5" fill="#4f5661" text-anchor="end">31–60 days</text><rect x="92" y="82.4" width="160.4" height="31.2" rx="3" fill="#2c4672"><title>31–60 days: AED 31.4M, 221 vehicles</title></rect><text x="260.4" y="102.0" font-size="12.5" fill="#4f5661" font-weight="600">31.4M · 221 units</text><text x="82" y="154.0" font-size="12.5" fill="#4f5661" text-anchor="end">61–90 days</text><rect x="92" y="134.4" width="74.6" height="31.2" rx="3" fill="#b08d57"><title>61–90 days: AED 14.6M, 98 vehicles</title></rect><text x="174.6" y="154.0" font-size="12.5" fill="#4f5661" font-weight="600">14.6M · 98 units</text><text x="82" y="206.0" font-size="12.5" fill="#4f5661" text-anchor="end">91–180 days</text><rect x="92" y="186.4" width="50.1" height="31.2" rx="3" fill="#c9875a"><title>91–180 days: AED 9.8M, 66 vehicles</title></rect><text x="150.1" y="206.0" font-size="12.5" fill="#4f5661" font-weight="600">9.8M · 66 units</text><text x="82" y="258.0" font-size="12.5" fill="#4f5661" text-anchor="end">180+ days</text><rect x="92" y="238.4" width="20.9" height="31.2" rx="3" fill="#b0413e"><title>180+ days: AED 4.1M, 31 vehicles</title></rect><text x="120.9" y="258.0" font-size="12.5" fill="#4f5661" font-weight="600">4.1M · 31 units</text></svg></div>
+        <span class="scroll-hint">Swipe to see the full chart →</span>
+        <div class="insight"><b>Commentary:</b> 76% of stock value is under 60 days old. Units over 90 days (AED 13.9M, 12% of stock) are reviewed monthly for net realisable value under IAS 2 and targeted for clearance.</div>
+      </div>
+      <div class="panel wide">
+        <h3>Sales incentives as % of vehicle gross profit</h3>
+        <div class="sub">By quarter, against a 12% policy cap</div>
+        <div class="chart-box"><svg viewBox="0 0 960 320" width="100%" role="img" aria-label="Sales incentives as a percentage of vehicle gross profit" font-family="Source Sans 3, Segoe UI, Arial, sans-serif" preserveAspectRatio="xMidYMid meet"><line x1="52" x2="944" y1="280.0" y2="280.0" stroke="#e3e6ea" stroke-width="1"/><text x="44" y="284.0" text-anchor="end" font-size="12" fill="#4f5661">0%</text><line x1="52" x2="944" y1="218.5" y2="218.5" stroke="#e3e6ea" stroke-width="1"/><text x="44" y="222.5" text-anchor="end" font-size="12" fill="#4f5661">5%</text><line x1="52" x2="944" y1="157.0" y2="157.0" stroke="#e3e6ea" stroke-width="1"/><text x="44" y="161.0" text-anchor="end" font-size="12" fill="#4f5661">10%</text><line x1="52" x2="944" y1="95.5" y2="95.5" stroke="#e3e6ea" stroke-width="1"/><text x="44" y="99.5" text-anchor="end" font-size="12" fill="#4f5661">15%</text><line x1="52" x2="944" y1="34.0" y2="34.0" stroke="#e3e6ea" stroke-width="1"/><text x="44" y="38.0" text-anchor="end" font-size="12" fill="#4f5661">20%</text><line x1="52" x2="944" y1="132.4" y2="132.4" stroke="#b0413e" stroke-width="1.6" stroke-dasharray="6 4"/><rect x="112.2" y="142.2" width="49.1" height="137.8" rx="2" fill="#1b2f4e"><title>Q1 new: 11.2% of GP</title></rect><rect x="165.7" y="112.7" width="49.1" height="167.3" rx="2" fill="#b08d57"><title>Q1 pre-owned: 13.6% of GP</title></rect><text x="136.7" y="160.2" font-size="12.5" font-weight="700" fill="#ffffff" text-anchor="middle">11.2%</text><text x="190.3" y="130.7" font-size="12.5" font-weight="700" fill="#ffffff" text-anchor="middle">13.6%</text><rect x="335.2" y="147.2" width="49.1" height="132.8" rx="2" fill="#1b2f4e"><title>Q2 new: 10.8% of GP</title></rect><rect x="388.7" y="121.3" width="49.1" height="158.7" rx="2" fill="#b08d57"><title>Q2 pre-owned: 12.9% of GP</title></rect><text x="359.7" y="165.2" font-size="12.5" font-weight="700" fill="#ffffff" text-anchor="middle">10.8%</text><text x="413.3" y="139.3" font-size="12.5" font-weight="700" fill="#ffffff" text-anchor="middle">12.9%</text><rect x="558.2" y="155.8" width="49.1" height="124.2" rx="2" fill="#1b2f4e"><title>Q3 new: 10.1% of GP</title></rect><rect x="611.7" y="134.9" width="49.1" height="145.1" rx="2" fill="#b08d57"><title>Q3 pre-owned: 11.8% of GP</title></rect><text x="582.7" y="173.8" font-size="12.5" font-weight="700" fill="#ffffff" text-anchor="middle">10.1%</text><text x="636.3" y="152.9" font-size="12.5" font-weight="700" fill="#ffffff" text-anchor="middle">11.8%</text><rect x="781.2" y="152.1" width="49.1" height="127.9" rx="2" fill="#1b2f4e"><title>Q4 new: 10.4% of GP</title></rect><rect x="834.7" y="138.6" width="49.1" height="141.4" rx="2" fill="#b08d57"><title>Q4 pre-owned: 11.5% of GP</title></rect><text x="805.7" y="170.1" font-size="12.5" font-weight="700" fill="#ffffff" text-anchor="middle">10.4%</text><text x="859.3" y="156.6" font-size="12.5" font-weight="700" fill="#ffffff" text-anchor="middle">11.5%</text><text x="163.5" y="298.0" font-size="12" fill="#4f5661" text-anchor="middle">Q1</text><text x="386.5" y="298.0" font-size="12" fill="#4f5661" text-anchor="middle">Q2</text><text x="609.5" y="298.0" font-size="12" fill="#4f5661" text-anchor="middle">Q3</text><text x="832.5" y="298.0" font-size="12" fill="#4f5661" text-anchor="middle">Q4</text><rect x="52" y="10" width="12" height="12" rx="2" fill="#1b2f4e"/><text x="72" y="20" font-size="12.5" fill="#4f5661">New</text><rect x="108.4" y="10" width="12" height="12" rx="2" fill="#b08d57"/><text x="128.4" y="20" font-size="12.5" fill="#4f5661">Pre-owned</text><line x1="205.6" x2="221.6" y1="16" y2="16" stroke="#b0413e" stroke-width="2.5" stroke-dasharray="5 3"/><text x="225.6" y="20" font-size="12.5" fill="#4f5661">Policy cap 12%</text></svg></div>
+        <span class="scroll-hint">Swipe to see the full chart →</span>
+        <div class="insight"><b>Commentary:</b> Pre-owned incentives exceeded the 12% cap in H1 because payouts were driven by volume. After the scheme was linked to gross profit per unit in Q3, incentive cost came back under the cap for both new and pre-owned.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TECHNICAL SKILLS -->
+<section class="alt" id="skills">
+  <div class="wrap">
+    <p class="section-label">Technical Skills</p>
+    <h2>Systems, tools and standards</h2>
+    <div class="skills">
+      <div class="skill">
+        <h3>ERP and Accounting Systems</h3>
+        <ul>
+          <li>Microsoft Dynamics 365</li>
+          <li>SAP FICO</li>
+          <li>Autoline (automotive DMS)</li>
+          <li>Odoo</li>
+          <li>Tally Prime</li>
+          <li>QuickBooks</li>
+        </ul>
+      </div>
+      <div class="skill">
+        <h3>Reporting and Analysis</h3>
+        <ul>
+          <li>Power BI</li>
+          <li>Advanced Excel: Power Query and Power Pivot</li>
+          <li>VBA and Macros</li>
+          <li>Financial modelling</li>
+          <li>Google Sheets</li>
+        </ul>
+      </div>
+      <div class="skill">
+        <h3>Standards and Tax</h3>
+        <ul>
+          <li>IFRS financial statements</li>
+          <li>UAE VAT and UAE Corporate Tax</li>
+          <li>Transfer pricing</li>
+          <li>Oman VAT</li>
+          <li>India GST and income tax</li>
+        </ul>
+      </div>
+      <div class="skill">
+        <h3>Controls and Leadership</h3>
+        <ul>
+          <li>Internal controls and reconciliations</li>
+          <li>Statutory and internal audit coordination</li>
+          <li>Team leadership and mentoring</li>
+          <li>Cost control</li>
+          <li>Process improvement</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- QUALIFICATIONS -->
+<section id="qualifications">
+  <div class="wrap">
+    <p class="section-label">Qualifications</p>
+    <h2>Education and certifications</h2>
+    <div class="certs">
+      <div class="cert">
+        <h3>Chartered Accountant (FCA)</h3>
+        <p>Institute of Chartered Accountants of India (ICAI)</p>
+        <span class="yr">Qualified November 2020</span>
+      </div>
+      <div class="cert">
+        <h3>Certified Public Accountant (CPA)</h3>
+        <p>CPA Australia</p>
+        <span class="yr">2024</span>
+      </div>
+      <div class="cert">
+        <h3>Bachelor of Commerce (B.Com.)</h3>
+        <p>The Maharaja Sayajirao University of Baroda, India</p>
+        <span class="yr">2016</span>
+      </div>
+    </div>
+
+    <h3 class="subhead">Professional Development</h3>
+    <ul class="plain-list">
+      <li>AI for Finance – Level 1 (2025)</li>
+      <li>Executive Development Program – Data Analysis and Visualization with Excel Power Tools and Power BI (2024)</li>
+      <li>Power BI with Microsoft 365 Apps (2024)</li>
+    </ul>
+
+    <h3 class="subhead">Languages</h3>
+    <p class="lead">English (Fluent) &nbsp;&middot;&nbsp; Hindi (Fluent) &nbsp;&middot;&nbsp; Gujarati (Native)</p>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact" id="contact">
+  <div class="wrap">
+    <p class="section-label">Contact</p>
+    <h2>Let's talk</h2>
+    <p class="lead">I am open to Financial Controller and Finance Manager opportunities in the automotive sector. My full CV is available to download below.</p>
+    <div class="contact-grid">
+      <div class="contact-item">
+        <div class="k">Email</div>
+        <a href="mailto:cavaibhavlathiya123@gmail.com">cavaibhavlathiya123@gmail.com</a>
+      </div>
+      <div class="contact-item">
+        <div class="k">LinkedIn</div>
+        <a href="https://www.linkedin.com/in/cavaibhavlathiya" target="_blank" rel="noopener">linkedin.com/in/cavaibhavlathiya</a>
+      </div>
+      <div class="contact-item">
+        <div class="k">Phone</div>
+        <a href="tel:+971561336620">+971 56 133 6620</a>
+      </div>
+      <div class="contact-item">
+        <div class="k">Location</div>
+        <span>Dubai, UAE</span>
+      </div>
+    </div>
+    <div class="btns">
+      <a class="btn btn-primary" href="assets/cv.pdf" download>Download CV</a>
+      <a class="btn btn-outline" href="mailto:cavaibhavlathiya123@gmail.com">Send an Email</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <span>&copy; 2026 Vaibhav Lathiya, FCA, CPA</span>
+    <span>Dashboards use illustrative data. No confidential employer information is disclosed.</span>
+  </div>
+</footer>
+
+
+
+</body>
+</html>
